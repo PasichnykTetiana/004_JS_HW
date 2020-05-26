@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let a=+prompt("Введите число: ", 0),
+    q=0,
+    i;
+    b="",
+    z='';
+function f(num) {
+    if (num>0){
+        b+="Число положительно, ";
+        if (num===2){
+            z='простое, '
+        }
+        if (num>1){
+            for (i=2; i<num; i++){
+                if (num%i!==0){
+                    z='простое, '
+                }
+                else {
+                    z="не является простым, ";
+                    break
+                }
+                }
+            b+=z
+
+            }
+        }
+    if (num<0){
+        b+="Число отрицательно, ";
+    }
+    b+="делится без остатка на:";
+    if (num%2===0){
+        b+=" 2";
+    }
+    if (num%5===0){
+        b+=" 5";
+    }
+    if (num%3===0){
+        b+=" 3";
+    }
+    if (num%6===0){
+        b+=" 6";
+    }
+    if (num%9===0){
+        b+=" 9";
+    }
+    return b;
+
+}
+document.write(f(a));
+</script>
+</body>
+</html>

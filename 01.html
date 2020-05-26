@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    document.write(" <input type=\"button\" id=\"Add\" value=\"Cумма\" />");
+    document.write(" <input type=\"button\" id=\"Sub\" value=\"Вычитание\" />");
+    document.write(" <input type=\"button\" id=\"Mul\" value=\"Умножение\" />");
+    document.write(" <input type=\"button\" id=\"Div\" value=\"Деление\" />");
+    let a=+prompt("Первый аргумент: ", 0),
+    b=+prompt("Второй аргумент: ", 0);
+    document.getElementById('Add').onclick = function(){
+        function Add(sum1, sum2) {
+            return sum1+sum2;
+        }
+        document.write("Cумма: ", Add(a,b));
+        document.write("<div>");
+    };
+    document.getElementById('Sub').onclick = function(){
+        function Sub(sub1, sub2) {
+            return sub1-sub2
+
+        }
+        document.write("Разность: ", Sub(a, b));
+        document.write("<div>");
+
+    };
+    document.getElementById('Mul').onclick = function(){
+        function Mul(mul1, mul2) {
+            return mul1*mul2
+        }
+        document.write("Произведение: ", Mul(a, b));
+        document.write("<div>");
+    };
+    document.getElementById('Div').onclick = function(){
+        function Div(div1, div2) {
+            if (div2===0){
+                return "Деление на ноль!";
+            }
+            else {
+                return div1/div2;
+            }
+
+        }
+        document.write("Частное: ", Div(a, b));
+    }
+</script>
+</body>
+</html>
